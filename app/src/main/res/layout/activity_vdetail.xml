@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/vdetail"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/v_detail_page"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <!--<fragment android:name="com.apj.wkb.fragment.PlayerFragment" android:id="@id/v_detail_player" android:layout_width="fill_parent" android:layout_height="205.0dip" />-->
+            <!--Video View MediaPlayer Controller-->
+            <FrameLayout
+                android:id="@+id/v_detail_player"
+                android:layout_width="match_parent"
+                android:layout_height="205.0dip" />
+
+
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:orientation="vertical" android:id="@id/v_detail_other" android:layout_weight="1.0">
+                <com.viewpagerindicator.TabPageIndicator
+                    android:id="@id/v_detail_tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60.0dip"/>
+
+                <android.support.v4.view.ViewPager android:id="@id/v_detail_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@id/v_detail_mask"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/player_replay_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@id/v_detail_comment_box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#ffeeeeee"
+            android:gravity="center_vertical"
+            android:minHeight="46.0dip"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@id/post_comment_box"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9.0dip"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginTop="9.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/text_input_bg"
+                android:gravity="top"
+                android:hint="@string/comment_length_hint"
+                android:maxLines="4"
+                android:paddingLeft="5.0dip"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_gray" />
+
+            <ImageView
+                android:id="@id/submit_post_comment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/publish_comment_btn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/v_detail_nolink_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110.0dip"
+            android:src="@drawable/ico_no_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/vdetail_fail_to_load"
+            android:textAppearance="@style/no_item_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/v_detail_no_such_course"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110.0dip"
+            android:src="@drawable/ico_no_such_course" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/vdetail_no_suchcourse"
+            android:textAppearance="@style/no_item_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/v_detail_loading_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@id/top_progressbar"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginTop="162.0dip"
+            android:indeterminateDrawable="@drawable/vopen_progress_anim" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/loading"
+            android:textAppearance="@style/no_item_style" />
+    </LinearLayout>
+</FrameLayout>

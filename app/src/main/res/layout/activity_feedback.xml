@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/accounttext_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip">
+
+        <TextView
+            android:id="@id/feedback_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="你的手机型号为motox，系统版本为4.4.2"
+            android:textColor="#ff333333"
+            android:textSize="12.0sp" />
+
+        <EditText
+            android:id="@id/edit_feedbackmessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/text_input_bg"
+            android:gravity="top"
+            android:hint="@string/feedbackpage_msg_hint"
+            android:maxLines="4"
+            android:paddingBottom="2.0dip"
+            android:paddingLeft="5.0dip"
+            android:textColor="#ff333333"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@id/feedback_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40.0dip"
+            android:background="@drawable/text_input_bg"
+            android:hint="@string/feedbackpage_email_hint"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:paddingBottom="2.0dip"
+            android:paddingLeft="5.0dip"
+            android:saveEnabled="true"
+            android:textColor="#ff333333"
+            android:textSize="16.0sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@id/feed_back_email_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送反馈邮件"
+                android:textColor="#ff999999"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

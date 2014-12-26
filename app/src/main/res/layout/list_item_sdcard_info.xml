@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@id/download_sdcard_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="存储卡1"
+        android:textColor="@color/text_gray"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@id/download_sdcard_inuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.0dip"
+        android:background="@drawable/sdcard_used_bg"
+        android:gravity="center"
+        android:text="@string/downloaded_sdcard_inuse"
+        android:textColor="@color/white"
+        android:textSize="10.0sp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@id/previous_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:src="@drawable/arrow_left_disabled" />
+
+    <TextView
+        android:id="@id/selected_text"
+        android:layout_width="34.0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="测试"
+        android:textColor="#ffeeeeee"
+        android:textSize="12.0sp" />
+
+    <ImageButton
+        android:id="@id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="5.0dip"
+        android:src="@drawable/arrow_right_disabled" />
+</LinearLayout>

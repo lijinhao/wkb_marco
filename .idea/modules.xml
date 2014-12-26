@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/d6/d6.iml" filepath="$PROJECT_DIR$/d6/d6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataprovider/dataprovider.iml" filepath="$PROJECT_DIR$/dataprovider/dataprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataprovidersqlite/dataprovidersqlite.iml" filepath="$PROJECT_DIR$/dataprovidersqlite/dataprovidersqlite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh-library/pulltorefresh-library.iml" filepath="$PROJECT_DIR$/pulltorefresh-library/pulltorefresh-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagerindicator/viewpagerindicator.iml" filepath="$PROJECT_DIR$/viewpagerindicator/viewpagerindicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wkb_marco.iml" filepath="$PROJECT_DIR$/wkb_marco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wkblibrary/wkblibrary.iml" filepath="$PROJECT_DIR$/wkblibrary/wkblibrary.iml" />
+    </modules>
+  </component>
+</project>
+

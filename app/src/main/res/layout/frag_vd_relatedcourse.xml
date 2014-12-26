@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/vdetail_relative_nocourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="10.0dip"
+        android:drawableTop="@drawable/ico_no_course"
+        android:text="@string/vdetail_no_courses"
+        android:textAppearance="@style/no_item_style" />
+
+    <ListView
+        android:id="@id/vdetail_relative_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_view_divider"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/list_item_selector" />
+</FrameLayout>

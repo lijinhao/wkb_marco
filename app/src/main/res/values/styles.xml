@@ -1,0 +1,398 @@
+<resources>
+
+
+    <!--<style name="button_selector_all">
+        <item name="android:background">@drawable/player_subtitle_btn_pressed</item>
+    </style>-->
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/VopenActionBar</item>
+        <item name="actionBarItemBackground">@drawable/actionbar_item_bg</item>
+        <item name="homeAsUpIndicator">@drawable/actionbar_up_btn</item>
+        <item name="searchViewSearchIcon">@drawable/actionbar_search</item>
+    </style>
+    <style name="VopenActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="height">50.0dip</item>
+        <item name="titleTextStyle">@style/VopenActionBarTitleText</item>
+        <item name="background">@drawable/actionbar_bg</item>
+    </style>
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/Widget.CirclePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>
+    </style>
+    <style name="Widget" />
+    <style name="Widget.TabPageIndicator" parent="@style/Widget">
+        <item name="android:textAppearance">@style/TextAppearance.TabPageIndicator</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/tab_item_bg</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="Widget.CirclePageIndicator" parent="@style/Widget">
+        <item name="android:padding">8.0dip</item>
+        <item name="strokeWidth">0.0dip</item>
+        <item name="fillColor">#ffffffff</item>
+        <item name="pageColor">#80ffffff</item>
+        <item name="snap">true</item>
+    </style>
+    <style name="TextAppearance.TabPageIndicator" parent="@style/Widget">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/tab_item_text_color_selector</item>
+    </style>
+    <style name="WelcomeStyle" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/welcome_bg_new</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="headtitle_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffc5aca0</item>
+    </style>
+    <style name="h_headtitle_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffc5aca0</item>
+    </style>
+    <style name="h_headtitle_style_download">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffc5aca0</item>
+    </style>
+    <style name="h_about_style">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffb1b28a</item>
+    </style>
+    <style name="h_copyright_style">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffb1b28a</item>
+    </style>
+    <style name="h_videotitle_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffb1d0ae</item>
+    </style>
+    <style name="h_download_title_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffb1d0ae</item>
+    </style>
+    <style name="h_download_select_title">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffb1d0ae</item>
+    </style>
+    <style name="h_download_percent_style">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff60a062</item>
+    </style>
+    <style name="play_loadding">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff525252</item>
+    </style>
+    <style name="h_detail_nomail">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+    <style name="h_detail_nomail_smail">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="play_loadding_">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/more_app_name_color</item>
+    </style>
+    <style name="h_typedesc_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff548d49</item>
+    </style>
+    <style name="h_typecontent_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff83b87e</item>
+    </style>
+    <style name="h_listtitle_style">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffb1d0ae</item>
+    </style>
+    <style name="h_listtype_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff548d49</item>
+    </style>
+    <style name="h_detailtitle_style">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffb1d0ae</item>
+    </style>
+    <style name="h_detailplayrecord_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ff487d40</item>
+    </style>
+    <style name="h_btn_text_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="h_common_text_style">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff848484</item>
+    </style>
+    <style name="h_common_text_style_">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff2d1307</item>
+    </style>
+    <style name="h_collect_top_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ff636563</item>
+    </style>
+    <style name="h_setting_text_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffb1b28a</item>
+    </style>
+    <style name="h_detail_text_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ff834c2e</item>
+    </style>
+    <style name="h_detail_text_style_">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffc9b6af</item>
+    </style>
+    <style name="h_memory_size">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff548d49</item>
+    </style>
+    <style name="m_headtitle_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fff1f2f4</item>
+    </style>
+    <style name="download_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="list_title_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="l_headtitle_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fff1f2f4</item>
+    </style>
+    <style name="menuPopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/menu_display_visible</item>
+        <item name="android:windowExitAnimation">@anim/menu_display_gone</item>
+    </style>
+    <style name="detailPopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/menu_display_visible</item>
+        <item name="android:windowExitAnimation">@anim/menu_display_gone</item>
+    </style>
+    <style name="coursetypePopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/course_display_visible</item>
+        <item name="android:windowExitAnimation">@anim/course_display_gone</item>
+    </style>
+    <style name="course_filter_item_style">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@drawable/course_filter_text_color_selector</item>
+    </style>
+    <style name="comment_toolbar_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="sub1_small_style">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="sub1_normal_style">
+        <item name="android:textSize">20.0sp</item>
+    </style>
+    <style name="sub1_big_style">
+        <item name="android:textSize">24.0sp</item>
+    </style>
+    <style name="sub1_huge_style">
+        <item name="android:textSize">28.0sp</item>
+    </style>
+    <style name="sub2_small_style">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+    <style name="sub2_normal_style">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="sub2_big_style">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="sub2_huge_style">
+        <item name="android:textSize">18.0sp</item>
+    </style>
+    <style name="VopenActionBarTitleText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+    <style name="VopenActionBarBtnText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+    <style name="VopenActionBarTabTextNormal">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="VopenActionBarSearchHint">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffcccccc</item>
+    </style>
+    <style name="VopenActionBarSearchText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="filter_panel_title_text">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_darkgray</item>
+    </style>
+    <style name="filter_panel_item_text">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="course_list_item_title">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="course_list_item_subtitle">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_darkgray</item>
+    </style>
+    <style name="no_item_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    <style name="no_item_small_style">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    <style name="search_hot_word_item_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="search_item_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="search_history_clear_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="my_account_name">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="my_account_summary">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    <style name="my_list_item">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="download_count_indicator">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="myfavor_login_hint">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="button_selector_checked">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@drawable/filter_item_selected</item>
+    </style>
+
+    <style name="button_selector_all">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@drawable/filter_item_bg_selector</item>
+    </style>
+
+    <style name="button_selector_sigle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@drawable/filter_item_bg_selector</item>
+    </style>
+
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="13.0dip"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip"
+    android:paddingTop="13.0dip">
+
+    <RelativeLayout
+        android:layout_width="145.0dip"
+        android:layout_height="81.0dip"
+        android:clipToPadding="false">
+
+        <com.netease.vopen.view.LoadingImageView
+            android:id="@id/list_item_img"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@id/list_item_newly_update_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-2.0dip"
+            android:layout_marginTop="2.0dip"
+            android:background="#fff09214"
+            android:paddingLeft="2.0dip"
+            android:paddingRight="2.0dip"
+            android:text="新翻译7"
+            android:textColor="@color/white"
+            android:textSize="10.0sp"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:id="@id/list_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginRight="6.0dip"
+            android:button="@drawable/checkbox_selector_with_border"
+            android:clickable="false"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="7.0dip"
+        android:layout_weight="1.0"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/list_item_title"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="课程名称课程名称"
+            android:textAppearance="@style/course_list_item_title" />
+
+        <LinearLayout
+            android:id="@id/list_item_tag_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/course_item_tag"
+                android:textAppearance="@style/course_list_item_subtitle" />
+
+            <TextView
+                android:id="@id/list_item_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/course_list_item_subtitle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/course_item_playcount"
+                android:textAppearance="@style/course_list_item_subtitle" />
+
+            <TextView
+                android:id="@id/list_item_playcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:textAppearance="@style/course_list_item_subtitle" />
+
+            <TextView
+                android:id="@id/list_item_updatedcount_prefix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/course_item_updatedcount"
+                android:textAppearance="@style/course_list_item_subtitle" />
+
+            <TextView
+                android:id="@id/list_item_updatedcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:textAppearance="@style/course_list_item_subtitle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/list_item_record_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@id/list_item_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/course_list_item_subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

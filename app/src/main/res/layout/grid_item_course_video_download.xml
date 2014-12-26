@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/video_btn_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@id/course_video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:gravity="center"
+        android:text="第1课"
+        android:textColor="@color/text_black"
+        android:textSize="16.0sp" />
+
+    <View
+        android:id="@id/space"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+
+    <CheckBox
+        android:id="@id/course_video_checkbox"
+        android:layout_width="16.0dip"
+        android:layout_height="16.0dip"
+        android:layout_marginRight="5.0dip"
+        android:button="@drawable/checkbox_selector_small"
+        android:clickable="false"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@id/course_video_tag_downloaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/video_downloaded_bg"
+        android:gravity="center"
+        android:text="@string/vdetail_tag_downloaded"
+        android:textColor="@color/white"
+        android:textSize="8.0sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/course_video_tag_not_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/video_not_available_bg"
+        android:gravity="center"
+        android:text="@string/vdetail_tag_not_available"
+        android:textColor="@color/white"
+        android:textSize="8.0sp"
+        android:visibility="gone" />
+</LinearLayout>

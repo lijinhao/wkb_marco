@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40.0dip"
+        android:paddingTop="15.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <TextView
+                android:id="@id/vdetail_translated_title"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingBottom="10.0dip"
+                android:text="@string/vdetail_has_translated"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@id/vdetail_list_style_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:scaleType="center"
+                android:src="@drawable/video_list_switch_btn" />
+        </LinearLayout>
+
+        <View
+            android:id="@id/vdetail_list_sep"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="#ffcccccc" />
+
+        <com.netease.vopen.view.MyListView
+            android:id="@id/vdetail_translated_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/list_view_divider"
+            android:listSelector="@drawable/list_item_selector"
+            android:visibility="visible" />
+
+        <com.netease.vopen.view.MyGridView
+            android:id="@id/vdetail_translated_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:cacheColorHint="#00000000"
+            android:horizontalSpacing="20.0dip"
+            android:numColumns="3"
+            android:verticalSpacing="10.0dip"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@id/vdetail_untranslated_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25.0dip"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:text="@string/vdetail_no_translated"
+            android:textColor="@color/text_darkgray"
+            android:textSize="14.0sp" />
+
+        <View
+            android:id="@id/vdetail_list_sep2"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="#ffcccccc" />
+
+        <com.netease.vopen.view.MyListView
+            android:id="@id/vdetail_untranslated_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.0dip"
+            android:divider="#ffcccccc"
+            android:dividerHeight="1.0dip"
+            android:listSelector="@drawable/list_item_selector"
+            android:visibility="visible" />
+
+        <com.netease.vopen.view.MyGridView
+            android:id="@id/vdetail_untranslated_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="7.0dip"
+            android:horizontalSpacing="20.0dip"
+            android:numColumns="3"
+            android:verticalSpacing="10.0dip"
+            android:visibility="visible" />
+    </LinearLayout>
+</ScrollView>

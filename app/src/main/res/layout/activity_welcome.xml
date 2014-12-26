@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/guide_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ff358d62"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@id/welcome_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@id/welcome_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="83.0dip"
+            android:src="@drawable/welcome_logo" />
+
+        <ImageView
+            android:id="@id/welcome_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13.0dip"
+            android:src="@drawable/welcome_text1" />
+
+        <ImageView
+            android:id="@id/welcome_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_title1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6.0dip"
+            android:src="@drawable/welcome_text2" />
+
+        <ProgressBar
+            android:id="@id/loading_pro"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="180.0dip"
+            android:indeterminateDrawable="@drawable/custom_progressbar"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/m9_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:src="@drawable/m9"
+            android:visibility="gone" />
+    </RelativeLayout>
+</FrameLayout>

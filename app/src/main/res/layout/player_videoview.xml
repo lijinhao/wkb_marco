@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <SurfaceView
+        android:id="@id/player_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:id="@id/player_adinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right|center"
+        android:background="#b2000000"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@id/count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff9000"
+            android:textSize="16.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/VideoView_ad_countdown"
+            android:textColor="#ffff9000"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="@string/VideoView_skip_ad"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/player_fullscreen_btn"
+        android:layout_width="33.0dip"
+        android:layout_height="33.0dip"
+        android:layout_gravity="bottom|right|center"
+        android:scaleType="center"
+        android:src="@drawable/player_fullscreen_btn_src" />
+</merge>

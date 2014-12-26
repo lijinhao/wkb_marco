@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="error_feedback_error_entries">
+        <item>@string/error_type_no_select</item>
+        <item>@string/error_type_cannot_play</item>
+        <item>@string/error_type_blurred_screen</item>
+        <item>@string/error_type_not_sync</item>
+        <item>@string/error_type_not_fluency</item>
+        <item>@string/error_type_other</item>
+    </array>
+    <array name="share_to_list">
+        <item>@string/share_to_netease</item>
+        <item>@string/share_to_sina</item>
+        <item>@string/share_to_tencent</item>
+        <item>@string/share_to_renren</item>
+    </array>
+    <string-array name="home_action_tab_titles">
+        <item>首页</item>
+        <item>全部课程</item>
+        <item>我</item>
+    </string-array>
+    <string-array name="all_course_filter_tag">
+        <item>全部</item>
+        <item>纪录片</item>
+        <item>文学</item>
+        <item>艺术</item>
+        <item>哲学</item>
+        <item>历史</item>
+        <item>经济</item>
+        <item>社会</item>
+        <item>法律</item>
+        <item>媒体</item>
+        <item>伦理</item>
+        <item>心理</item>
+        <item>管理</item>
+        <item>技能</item>
+        <item>数学</item>
+        <item>物理</item>
+        <item>化学</item>
+        <item>生物</item>
+        <item>医学</item>
+        <item>环境</item>
+        <item>计算机</item>
+    </string-array>
+    <string-array name="all_course_filter_source">
+        <item>全部</item>
+        <item>国内</item>
+        <item>国外</item>
+        <item>TED</item>
+    </string-array>
+    <string-array name="all_course_filtet_sort">
+        <item>按最新</item>
+        <item>按最热</item>
+    </string-array>
+    <string-array name="vdetail_tab_title">
+        <item>简介</item>
+        <item>目录</item>
+        <item>相关推荐</item>
+        <item>跟贴</item>
+    </string-array>
+    <string-array name="player_subtitle_sizes">
+        <item>小</item>
+        <item>普通</item>
+        <item>大</item>
+        <item>极大</item>
+    </string-array>
+    <string-array name="download_action_tab_titles">
+        <item>下载中</item>
+        <item>已下载</item>
+    </string-array>
+</resources>

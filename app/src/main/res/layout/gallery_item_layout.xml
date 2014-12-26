@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.netease.vopen.view.LoadingImageView
+        android:id="@id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="64.0dip"
+        android:layout_gravity="bottom|left|center"
+        android:background="@drawable/gallery_item_bg"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="80.0dip">
+
+        <TextView
+            android:id="@id/image_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/head_img_tag_bg"
+            android:text="赏课"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/image_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:shadowColor="@color/black"
+            android:shadowDy="1.0"
+            android:shadowRadius="3.0"
+            android:singleLine="true"
+            android:text="长白山特色花卉植物资源哈哈哈哈"
+            android:textColor="@color/white"
+            android:textSize="17.0sp" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tab_item_bg"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@id/tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的下载"
+        android:textAppearance="@style/VopenActionBarTabTextNormal"
+        android:textColor="@color/tab_item_text_color_selector" />
+
+    <ImageView
+        android:id="@id/tab_update_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="-5.0dip"
+        android:src="@drawable/tab_new_ico"
+        android:visibility="visible" />
+</merge>

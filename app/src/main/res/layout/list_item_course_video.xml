@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="12.0dip"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip"
+    android:paddingTop="12.0dip">
+
+    <ImageView
+        android:id="@id/vlist_playing"
+        android:layout_width="18.0dip"
+        android:layout_height="18.0dip"
+        android:src="@drawable/video_playing_ico"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@id/vlist_play_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="18.0dip"
+        android:layout_height="18.0dip"
+        android:background="@drawable/video_paly_progess_bg"
+        android:max="100"
+        android:padding="2.5dip"
+        android:progress="0"
+        android:progressDrawable="@drawable/video_play_progress" />
+
+    <TextView
+        android:id="@id/vlist_course_title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_weight="1.0"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:singleLine="false"
+        android:text="史前艺术 - 裸体的女人"
+        android:textColor="@color/text_black"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@id/vlist_tag_downloaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/video_downloaded_bg"
+        android:gravity="center"
+        android:text="@string/vdetail_tag_downloaded"
+        android:textColor="@color/white"
+        android:textSize="8.0sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/vlist_tag_not_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/video_not_available_bg"
+        android:gravity="center"
+        android:text="@string/vdetail_tag_not_available"
+        android:textColor="@color/white"
+        android:textSize="8.0sp"
+        android:visibility="gone" />
+</LinearLayout>

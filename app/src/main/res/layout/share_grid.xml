@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/share_dialog_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2.0px"
+        android:background="@color/text_green" />
+
+    <TextView
+        android:id="@id/share1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="14.0dip"
+        android:layout_marginTop="18.0dip"
+        android:text="@string/share_to"
+        android:textColor="@color/text_black"
+        android:textSize="18.0sp" />
+
+    <GridView
+        android:id="@id/share_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:verticalSpacing="8.0dip" />
+
+    <TextView
+        android:id="@id/share_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginBottom="18.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="18.0dip"
+        android:background="@drawable/search_history_clear_btn_bg"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/share_title"
+        android:textSize="18.0sp" />
+</LinearLayout>

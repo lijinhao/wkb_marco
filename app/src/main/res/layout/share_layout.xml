@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip">
+
+            <TextView
+                android:id="@id/share_weibo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black" />
+
+            <TextView
+                android:id="@id/left_share_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/share_text_limit_count"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@id/share_to_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:gravity="top"
+            android:minHeight="108.0dip"
+            android:textColor="@color/text_black" />
+
+        <CheckBox
+            android:id="@id/need_follow_vopen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:checked="true"
+            android:text="@string/follow_vopen_sina_weibo"
+            android:textColor="@color/main_text_green"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150.0dip"
+    android:layout_height="150.0dip"
+    android:background="@drawable/player_bars_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/sub1_checkbox_container"
+        android:layout_width="150.0dip"
+        android:layout_height="36.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="5.0dip">
+
+        <TextView
+            android:id="@id/sub1_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/chinese"
+            android:textColor="#ffeeeeee"
+            android:textSize="15.0sp" />
+
+        <CheckBox
+            android:id="@id/sub1_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/sub_check_box_selector"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/sub1_selector_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:background="#26ffffff" />
+
+    <LinearLayout
+        android:id="@id/sub1_selector_container"
+        android:layout_width="150.0dip"
+        android:layout_height="36.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="0.0dip">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/text_size"
+            android:textColor="#ff999999"
+            android:textSize="12.0sp" />
+
+        <com.netease.vopen.view.HoriSelectorView
+            android:id="@id/sub1_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#26ffffff" />
+
+    <LinearLayout
+        android:id="@id/sub2_checkbox_container"
+        android:layout_width="150.0dip"
+        android:layout_height="36.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="5.0dip">
+
+        <TextView
+            android:id="@id/sub2_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/english"
+            android:textColor="#ffeeeeee"
+            android:textSize="15.0sp" />
+
+        <CheckBox
+            android:id="@id/sub2_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/sub_check_box_selector"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/sub2_selector_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:background="#26ffffff" />
+
+    <LinearLayout
+        android:id="@id/sub2_selector_container"
+        android:layout_width="150.0dip"
+        android:layout_height="36.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="0.0dip">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/text_size"
+            android:textColor="#ff999999"
+            android:textSize="12.0sp" />
+
+        <!--
+        <com.netease.vopen.view.HoriSelectorView
+            android:id="@id/sub2_selector"
+            android:animtionIntevval="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+    </LinearLayout>
+</LinearLayout>

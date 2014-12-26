@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@id/search_empty_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100.0dip"
+            android:gravity="center"
+            android:src="@drawable/ico_no_search_result" />
+
+        <TextView
+            android:id="@id/searchnoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:gravity="center"
+            android:text="@string/searchnoResult"
+            android:textAppearance="@style/no_item_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/search_result_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@id/search_result_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/list_view_divider"
+            android:listSelector="@drawable/list_item_selector"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/search_loading_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginTop="162.0dip"
+            android:indeterminateDrawable="@drawable/vopen_progress_anim" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/loading"
+            android:textAppearance="@style/no_item_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/search_hot_words_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="10.0dip"
+        android:visibility="gone">
+
+        <com.netease.vopen.view.FlowLayout
+            android:id="@id/search_hot_word"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:visibility="visible"
+            app:horizontalSpacing="10.0dip"
+            app:orientation="horizontal"
+            app:verticalSpacing="10.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/search_history_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@id/search_history_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#ffcccccc"
+            android:dividerHeight="1.0px"
+            android:listSelector="@drawable/list_item_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/search_match_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@id/search_match_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#ffcccccc"
+            android:dividerHeight="1.0px"
+            android:listSelector="@drawable/list_item_selector" />
+    </LinearLayout>
+</FrameLayout>

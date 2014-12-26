@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/downloaded_content_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/downloaded_scantip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/show_tip_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="12.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="12.0dip">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/downloaded_scan"
+                android:textColor="@color/text_black"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@id/downloaded_close_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/show_tip_close_btn" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@id/downloaded_list"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:cacheColorHint="@color/nullcolor"
+            android:divider="#ffcccccc"
+            android:dividerHeight="1.0px"
+            android:listSelector="@drawable/list_item_selector"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@id/downloaded_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="78.0dip"
+                android:src="@drawable/ico_no_download" />
+
+            <TextView
+                android:id="@id/no_download_data_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:text="@string/downloaded_empty_title"
+                android:textAppearance="@style/no_item_style" />
+
+            <TextView
+                android:id="@id/no_download_data_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/downloaded_empty_desc"
+                android:textAppearance="@style/no_item_small_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/downloaded_edit_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:background="@drawable/panel_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip">
+
+            <TextView
+                android:id="@id/downloaded_select_btn"
+                android:layout_width="123.0dip"
+                android:layout_height="40.0dip"
+                android:background="@drawable/btn_white_small_bg"
+                android:gravity="center"
+                android:text="@string/download_mgr_select_all"
+                android:textColor="@color/black_text_btn_selecter"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@id/downloaded_delete_btn"
+                android:layout_width="123.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="26.0dip"
+                android:background="@drawable/btn_green_small_bg"
+                android:gravity="center"
+                android:text="@string/download_mgr_delete"
+                android:textColor="@color/white_text_btn_selector"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/downloaded_loading_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginTop="162.0dip"
+            android:indeterminateDrawable="@drawable/vopen_progress_anim" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/loading"
+            android:textAppearance="@style/no_item_style" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="15.0dip">
+
+        <TextView
+            android:id="@id/vdetail_brief_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="课程名称"
+            android:textColor="@color/text_black"
+            android:textSize="18.0sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vdetail_brief_type"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@id/vdetail_brief_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:text="经济"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vdetail_brief_school"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@id/vdetail_brief_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:text="斯坦福大学"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vdetail_brief_teacher"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@id/vdetail_brief_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:text="王晓秋"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/vdetail_brief_intr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/vdetail_brief_brief"
+                android:textColor="@color/text_darkgray"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

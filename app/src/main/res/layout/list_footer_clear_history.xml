@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="false"
+    android:orientation="vertical"
+    android:paddingBottom="13.0dip"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip"
+    android:paddingTop="13.0dip">
+
+    <TextView
+        android:id="@id/clear_history_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_history_clear_btn_bg"
+        android:gravity="center"
+        android:text="@string/search_clear_history"
+        android:textAppearance="@style/search_history_clear_style" />
+</LinearLayout>
