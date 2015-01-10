@@ -193,6 +193,7 @@ public class HomeFragment extends Fragment implements LoaderManager.LoaderCallba
         }
     }
 
+    //当Fragment与Activity发生关联时调用。
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -204,12 +205,18 @@ public class HomeFragment extends Fragment implements LoaderManager.LoaderCallba
         }
     }
 
+    //与onAttach相对应，当Fragment与Activity关联被取消时调用
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
+    //与onCreateView想对应，当该Fragment的视图被移除时调用
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
 
     @Override
     public Loader<List<HomeCategory>> onCreateLoader(int i, Bundle bundle) {

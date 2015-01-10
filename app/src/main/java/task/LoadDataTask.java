@@ -10,7 +10,15 @@ import util.DataUtils;
 
 /**
  * Created by lijinhao on 2014/12/9.
+ *
  */
+
+/*
+* AsyncTask<Void,Void,Void>参数
+* Params 启动任务执行的输入参数，比如HTTP请求的URL。
+* Progress 后台任务执行的百分比。
+* Result 后台执行任务最终返回的结果，比如String.
+* */
 public class LoadDataTask extends AsyncTask<Void,Void,List<HomeCategory>> {
 
     private String params;

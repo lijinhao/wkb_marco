@@ -2,6 +2,7 @@ package loader;
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,10 @@ import util.DataUtils;
 
 /**
  * Created by lijinhao on 2014/11/27.
+ * 1.首先执行onStartLoading方法，接着doInBackground,加载完毕调用deliverResult
+ * 2.如果加载过，或返回此Activity时，不再调用doInBackground方法，
+ * 而调用startLoading来判断是否采用旧数据访问,若想立即更新数据可向下拉，从而调用PullToRefreshScrollView
+ * 来刷新最新数据
  */
 public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
 
@@ -54,8 +59,10 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
         ProviderUtils utils = new ProviderUtils(this.context);
         //if local contain data..
         if(utils.getCount()>0){
+            Log.i("loadInBackground","---------------------------loadInBackground1---------------------------");
             return loadDataFromLocal();
         }else{//else remote load..
+            Log.i("loadInBackground","---------------------------loadInBackground2---------------------------");
             return DataUtils.loadDate(this.context);
         }
     }
@@ -112,25 +119,31 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
     @Override
     public void deliverResult(List<HomeCategory> data) {
         if (isReset()) {
+            Log.i("deliverResult","---------------------------deliverResult1---------------------------");
             // An async query came in while the loader is stopped.  We
             // don't need the result.
             if (data != null) {
+                Log.i("deliverResult","---------------------------deliverResult2---------------------------");
                 onReleaseResources(data);
             }
         }
         List<HomeCategory> oldData = mData;
         mData = data;
+        //是否已经加载过
         if (isStarted()) {
+            Log.i("deliverResult","---------------------------deliverResult3---------------------------");
             // If the Loader is currently started, we can immediately
             // deliver its results.
             super.deliverResult(data);
         }
 
 
+        //释放资源旧数据
         // At this point we can release the resources associated with
         // 'oldApps' if needed; now that the new result is delivered we
         // know that it is no longer in use.
         if (oldData != null) {
+            Log.i("deliverResult","---------------------------deliverResult4---------------------------");
             onReleaseResources(oldData);
         }
     }
@@ -141,12 +154,15 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
      */
     @Override
     protected void onStartLoading() {
+
         if (mData != null) {
+            Log.i("onStartLoading","---------------------------onStartLoading1---------------------------");
             // If we currently have a result available, deliver it
             // immediately.
             deliverResult(mData);
         }
         if (takeContentChanged() || mData == null) {
+            Log.i("onStartLoading","---------------------------onStartLoading2---------------------------");
             // If the data has changed since the last time it was loaded
             // or is not currently available, start a load.
             forceLoad();
@@ -155,9 +171,11 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
 
     /**
      * Handles a request to stop the Loader.
+     * 跳转其他页面时会调用此方法
      */
     @Override
     protected void onStopLoading() {
+        Log.i("onStopLoading","---------------------------onStopLoading---------------------------");
         // Attempt to cancel the current load task if possible.
         cancelLoad();
     }
@@ -168,6 +186,7 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
      */
     @Override
     public void onCanceled(List<HomeCategory> apps) {
+        Log.i("onCanceled","---------------------------onCanceled---------------------------");
         super.onCanceled(apps);
 
         // At this point we can release the resources associated with 'apps'
@@ -181,6 +200,7 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
      */
     @Override
     protected void onReset() {
+        Log.i("onReset","---------------------------onReset1---------------------------");
         super.onReset();
 
 
@@ -191,6 +211,7 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
         // At this point we can release the resources associated with 'apps'
         // if needed.
         if (mData != null) {
+            Log.i("onReset","---------------------------onReset2---------------------------");
             onReleaseResources(mData);
             mData = null;
         }
@@ -201,6 +222,7 @@ public class HomeCategoryLoader extends AsyncTaskLoader<List<HomeCategory>> {
      * with an actively loaded data set.
      */
     protected void onReleaseResources(List<HomeCategory> apps) {
+        Log.i("onReleaseResources","---------------------------onReleaseResources1---------------------------");
         // For a simple List<> there is nothing to do.  For something
         // like a Cursor, we would close it here.
     }

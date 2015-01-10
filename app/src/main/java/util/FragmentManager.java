@@ -42,27 +42,30 @@ public class FragmentManager {
 
     public static Fragment getDetailActivityFragmentInstance(int sectionNumber){
         if(sectionNumber==1){
+            //
             VideoCourseInfoFragment fragment = new VideoCourseInfoFragment();
-            Bundle bundle = new Bundle();
-            bundle.putInt(ARG_SECTION_NUMBER,sectionNumber);
-            fragment.setArguments(bundle);
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
             return fragment;
-        }else if(sectionNumber == 2){
+        }else if(sectionNumber==2){
             VideoListFragment fragment = new VideoListFragment();
-            Bundle bundle = new Bundle();
-            bundle.putInt(ARG_SECTION_NUMBER,sectionNumber);
-            fragment.setArguments(bundle);
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
             return fragment;
-        }else if(sectionNumber == 3){
+
+        }else if(sectionNumber==3){
             VideoRelatedCourseFragment fragment = new VideoRelatedCourseFragment();
-            Bundle bundle = new Bundle();
-            fragment.setArguments(bundle);
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
             return fragment;
-        }else{
+        }  else{
             VideoCommentsFragment fragment = new VideoCommentsFragment();
-            Bundle bundle = new Bundle();
-            bundle.putInt(ARG_SECTION_NUMBER,sectionNumber);
-            fragment.setArguments(bundle);
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
             return fragment;
         }
     }

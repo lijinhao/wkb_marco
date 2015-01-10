@@ -1,8 +1,7 @@
 package fragment;
 
-import android.content.Context;
+import android.app.Activity;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -12,16 +11,12 @@ import android.view.ViewGroup;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-import com.github.kevinsawicki.http.HttpRequest;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
 import java.util.List;
 
 import entity.CourseDetailItem;
 import entity.HomeCategory;
 import task.IDataListener;
-import util.DataUtils;
+import task.OnVideoFragmentInterfaceListener;
 import wkb.apj.com.wkb_marco.R;
 import wkb.apj.com.wkb_marco.VideoPlayerActivity;
 
@@ -33,18 +28,24 @@ public  class PlayerFragment extends Fragment implements IDataListener {
     private VideoView videoView;
     private String url;
     private String title;
+    private OnVideoFragmentInterfaceListener mListener;
+    private CourseDetailItem mData;
 
     public PlayerFragment() {
     }
 
+    //当Fragment所在的Activity被启动完成后回调该方法
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         if (getArguments() != null) {
+            Log.i("onActivityCreated","--------------------------------onActivityCreated------------------------------");
             url = getArguments().getString("url");
             title = getArguments().getString("title");
-            LoadDetailTask task =new LoadDetailTask(this.getActivity(),url,this);
-            task.execute();
+
+            postDetailData(mData);
+            //LoadDetailTask task =new LoadDetailTask(this.getActivity(),url,this);
+            //task.execute();
         }
     }
 
@@ -78,44 +79,34 @@ public  class PlayerFragment extends Fragment implements IDataListener {
         }
     }
 
-    public class LoadDetailTask extends AsyncTask<Void,Void,String> {
-
-        private String contentId;
-        private Context context;
-        private IDataListener listener;
-
-        public LoadDetailTask(Context context,String id,IDataListener listener) {
-            super();
-            contentId = id;
-            this.context =context;
-            this.listener = listener;
+    // TODO: Rename method, update argument and hook method into UI event
+    public CourseDetailItem getData() {
+        if (mListener != null) {
+            return mListener.onFragmentInteraction();
         }
+        return null;
+    }
 
-        @Override
-        protected String doInBackground(Void... params) {
-            String jsonString = "";
-            try{
-                jsonString  =  HttpRequest.get(String.format(DataUtils.URL_DETAIL, contentId)).accept("application/json").body();
-            }catch (Exception ex){
-                Log.e("DataUtils", "loadDate", ex);
-            }
-            return jsonString;
-        }
+    //当该Fragment被添加到Activity时被回调。该方法只会调用一次。
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
+        try{
+            Log.i("onAttach","------------------------------onAttach---------------------------------");
+            mListener = (OnVideoFragmentInterfaceListener) activity;
+            mData = mListener.onFragmentInteraction();
+        }catch(ClassCastException e){
+            throw new ClassCastException(activity.toString()+ "must implement OnFragmentInteractionListener");
 
-        @Override
-        protected void onPostExecute(String jsonString) {
-            Gson gson = new Gson();
-            try{
-                CourseDetailItem data = gson.fromJson(jsonString, new TypeToken<CourseDetailItem>(){}.getType());
-                listener.postDetailData(data);
-            }catch (Exception ex){
-                listener.postDetailData(null);
-            }
         }
+    }
+
+    //将该Fragment从Activity中被删除，被替换完成时回调该方法，
+    // onDestroy()方法后一定会回调onDetach()方法。该方法只会被调用一次。
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
     }
 }

@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -40,6 +41,12 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+//        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+//                .detectDiskReads()
+//                .detectDiskWrites()
+//                .detectNetwork()
+//                .penaltyLog()
+//                .build());
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -47,6 +54,8 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
+        //首页 课程 我 （包括ViewPage）
+        //导航到HomeFragment , CatalogFragment , SettingFragment
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -62,7 +71,7 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
         mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                tabs.setCurrentItem(position);
+               tabs.setCurrentItem(position);
             }
         });
 
@@ -103,6 +112,7 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         MenuInflater inflater = getMenuInflater();
+        //菜单
         inflater.inflate(R.menu.home_actions,menu);
         //getMenuInflater().inflate(R.menu.action_bars, menu);
         return super.onCreateOptionsMenu(menu);
@@ -120,20 +130,20 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
                 startActivity(intent);
                 return true;
             default:
+                return super.onOptionsItemSelected(menuitem);
         }
-        return true;
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onFragmentInterface(Uri uri) {
 
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         // When the given tab is selected, switch to the corresponding page in
         // the ViewPager.
+        Log.i("onTabSelected","onTabSelected");
         mViewPager.setCurrentItem(tab.getPosition());
     }
 
@@ -143,11 +153,6 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-    }
-
-    @Override
-    public void onFragmentInterface(Uri uri) {
-
     }
 
     /**

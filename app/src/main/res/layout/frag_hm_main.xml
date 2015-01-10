@@ -111,7 +111,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@id/recommend_no_data"
+                    android:id="@+id/recommend_no_data"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="14.0dip"
@@ -170,6 +170,7 @@
                     android:textSize="12.0sp" />
             </LinearLayout>
 
+            <!-- 下划线-->
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1.0px"

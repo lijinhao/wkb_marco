@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/d6/d6.iml" filepath="$PROJECT_DIR$/d6/d6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/d7/d7.iml" filepath="$PROJECT_DIR$/d7/d7.iml" />
       <module fileurl="file://$PROJECT_DIR$/dataprovider/dataprovider.iml" filepath="$PROJECT_DIR$/dataprovider/dataprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/dataprovidersqlite/dataprovidersqlite.iml" filepath="$PROJECT_DIR$/dataprovidersqlite/dataprovidersqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />

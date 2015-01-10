@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -25,11 +26,11 @@ import entity.CourseDetailItem;
 import entity.HomeCategory;
 import fragment.PlayerFragment;
 import task.IDataListener;
+import task.OnVideoFragmentInterfaceListener;
 import util.DataUtils;
-import util.FragmentManager;
 
 
-public class VideoPlayerActivity extends ActionBarActivity {
+public class VideoPlayerActivity extends ActionBarActivity implements OnVideoFragmentInterfaceListener{
 
     private String url;
     private String title;
@@ -72,17 +73,19 @@ public class VideoPlayerActivity extends ActionBarActivity {
                 @Override
                 public void postDetailData(CourseDetailItem data) {
                     mData = data;
-
+                    //播放电影
                     PlayerFragment fragment = new PlayerFragment();
                     Bundle args = new Bundle();
                     args.putString("url", url);
                     args.putString("title", title);
                     fragment.setArguments(args);
 
+                    //电影视图 v_detail_player
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.v_detail_player, fragment)
                             .commit();
 
+                    //用来总计数量,如果不加上这4句代码，最下角就不会显示视图
                     pagerData.add("简介");
                     pagerData.add("目录");
                     pagerData.add("相关课程");
@@ -124,15 +127,26 @@ public class VideoPlayerActivity extends ActionBarActivity {
 
     private List<String> pagerData = new ArrayList<String>();
 
+    @Override
+    public void OnFragmentInterface(CourseDetailItem item) {
+        this.mData = item;
+    }
+
+    @Override
+    public CourseDetailItem onFragmentInteraction() {
+        return mData;
+    }
+
+    //最下方的切换界面(简介，目录，相关推荐，跟帖)
     public class SectionsPagerAdapter extends FragmentPagerAdapter{
 
-        public SectionsPagerAdapter(android.support.v4.app.FragmentManager fm) {
+        public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int position) {
-            return FragmentManager.getDetailActivityFragmentInstance(position);
+            return util.FragmentManager.getDetailActivityFragmentInstance(position + 1);
         }
 
         @Override
@@ -146,13 +160,13 @@ public class VideoPlayerActivity extends ActionBarActivity {
 
             switch (position){
                 case 0:
-                    return "简介";
+                    return "简介1";
                 case 1:
-                    return "目录";
+                    return "目录2";
                 case 2:
-                    return "相关推荐";
+                    return "相关推荐3";
                 case 3:
-                    return "跟帖";
+                    return "跟帖4";
             }
             return null;
         }
